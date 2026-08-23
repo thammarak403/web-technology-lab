@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>บันทึกรายรับรายจ่าย</title>
+</head>
+
+<body>
+
+    <h2>ระบบบันทึกรายรับ - รายจ่าย</h2>
+
+    <form id="budgetForm">
+
+        <label>รายการ:</label>
+        <input type="text" id="item" required>
+
+        <br><br>
+
+        <label>จำนวนเงิน:</label>
+        <input type="number" id="amount" min="0" required>
+
+        <br><br>
+
+        <label>ประเภท:</label>
+        <input type="radio" name="ประเภท" value="รายรับ" required>
+        รายรับ
+
+        <input type="radio" name="ประเภท" value="รายจ่าย">
+        รายจ่าย
+
+        <br><br>
+
+        <input type="submit" value="เพิ่มรายการ">
+        <input type="reset" value="ยกเลิก">
+
+    </form>
+    <h3>สรุปยอดเงิน</h3>
+
+<p id="totalIncome">รายรับรวม: 0 บาท</p>
+
+<p id="totalExpense">รายจ่ายรวม: 0 บาท</p>
+
+<p id="balance">ยอดคงเหลือ: 0 บาท</p>
+<h3>รายการทั้งหมด</h3>
+<ul id="transactionList">
+</ul>
+<script src="busgetfrom.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>บันทึกรายรับรายจ่าย</title>
+</head>
+
+<body>
+
+    <h2>ระบบบันทึกรายรับ - รายจ่าย</h2>
+
+    <form id="budgetForm">
+
+        <label>รายการ:</label>
+        <input type="text" id="item" required>
+
+        <br><br>
+
+        <label>จำนวนเงิน:</label>
+        <input type="number" id="amount" min="0" required>
+
+        <br><br>
+
+        <label>ประเภท:</label>
+        <input type="radio" name="ประเภท" value="รายรับ" required>
+        รายรับ
+
+        <input type="radio" name="ประเภท" value="รายจ่าย">
+        รายจ่าย
+
+        <br><br>
+
+        <input type="submit" value="เพิ่มรายการ">
+        <input type="reset" value="ยกเลิก">
+
+    </form>
+    <h3>สรุปยอดเงิน</h3>
+
+<p id="totalIncome">รายรับรวม: 0 บาท</p>
+
+<p id="totalExpense">รายจ่ายรวม: 0 บาท</p>
+
+<p id="balance">ยอดคงเหลือ: 0 บาท</p>
+<h3>รายการทั้งหมด</h3>
+<ul id="transactionList">
+</ul>
+<script src="busgetfrom.js"></script>
+</body>
+</html>

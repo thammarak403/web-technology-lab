@@ -1,0 +1,184 @@
+/* Reset พื้นฐาน - ใช้กับทุก element */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Sarabun", sans-serif;
+  background-color: #f5f5f5;
+  color: #333333;
+}
+
+/* ===== Header ===== */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background-color: #2e7d32;
+  color: white;
+  padding: 1rem;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+/* ===== Container ===== */
+.container {
+  width: calc(100% - 2rem);
+  margin-inline: auto;
+  padding-block: 1.5rem;
+}
+
+/* ===== Form ===== */
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #dddddd;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #cccccc;
+  border-radius: 0.25rem;
+}
+
+.btn-search {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #222222;
+  color: white;
+  font-size: 0.85rem;
+}
+/* =========================
+   Tablet: ตั้งแต่ 768px
+========================= */
+@media (min-width: 768px) {.detail-layout {
+    grid-template-columns: 2fr 1fr;
+  }
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .container {
+    max-width: 720px;
+  }
+
+  .search-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  .form-group {
+    flex: 1 1 200px;
+  }
+
+  .btn-search {
+    flex: 0 0 auto;
+    padding-inline: 2rem;
+  }
+}
+
+/* =========================
+   Desktop: ตั้งแต่ 1200px
+========================= */
+@media (min-width: 1200px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .container {
+    max-width: 1140px;
+  }
+
+  .site-header {
+    padding: 1rem 2rem;
+  }
+}
+/* ===== Detail Page ===== */
+.detail-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.detail-main, .detail-side {
+  background: white;
+  border: 1px solid #dddddd;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info-table th, .info-table td {
+  text-align: left;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.info-table th {
+  color: #666666;
+  width: 40%;
+}
+
+.tag-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.tag-full {
+  background-color: #ffcdd2;
+  color: #b71c1c;
+}
