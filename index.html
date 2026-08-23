@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <form id="transactionForm">
+            <label for="itemName">รายการ:</label>
+            <input type="text" id="itemName" name="รายการ" required>
+            <br><br>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <br><br>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" required>
+            <br><br>
+            <label>ประเภท:</label>
+            <input type="radio" id="typeIncome" name="ประเภท" value="รายรับ" required>
+            <label for="typeIncome">รายรับ</label>
+            <input type="radio" id="typeExpense" name="ประเภท" value="รายจ่าย" required>
+            <label for="typeExpense">รายจ่าย</label>
+            <br><br>
+            <input type="submit" value="ตกลง">
+            <input type="reset" value="ยกเลิก">
+        </form>
+        let
+    </div>
+    <div>ส่วนที่ใช้แสดงผลรายรับทั้งหมด
+        <ul id="incomeList">
+            <!-- รายรับจะถูกเพิ่มที่นี่ -->
+             <li>ตัวอย่างรายรับ 1</li>
+        </ul>
+        <p id="totalIncome">รวมรายรับทั้งหมด: 0</p>
+    </div>
+    <div>ส่วนที่ใช้แสดงผลรายจ่ายทั้งหมด
+        <ul id="expenseList">
+            <!-- รายจ่ายจะถูกเพิ่มที่นี่ -->
+             <li>ตัวอย่างรายจ่าย 1</li>
+        </ul>
+        <p id="totalExpense">รวมรายจ่ายทั้งหมด: 0</p>
+    </div>
+
+</body>
+</html>
