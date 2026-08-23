@@ -1,49 +1,97 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>บันทึกรายรับรายจ่าย</title>
 </head>
-<body>
-    <div>
-        <form id="transactionForm">
-            <label for="itemName">รายการ:</label>
-            <input type="text" id="itemName" name="รายการ" required>
-            <br><br>
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required>
-            <br><br>
-            <label for="amount">Amount:</label>
-            <input type="number" id="amount" name="amount" required>
-            <br><br>
-            <label>ประเภท:</label>
-            <input type="radio" id="typeIncome" name="ประเภท" value="รายรับ" required>
-            <label for="typeIncome">รายรับ</label>
-            <input type="radio" id="typeExpense" name="ประเภท" value="รายจ่าย" required>
-            <label for="typeExpense">รายจ่าย</label>
-            <br><br>
-            <input type="submit" value="ตกลง">
-            <input type="reset" value="ยกเลิก">
-        </form>
-        let
-    </div>
-    <div>ส่วนที่ใช้แสดงผลรายรับทั้งหมด
-        <ul id="incomeList">
-            <!-- รายรับจะถูกเพิ่มที่นี่ -->
-             <li>ตัวอย่างรายรับ 1</li>
-        </ul>
-        <p id="totalIncome">รวมรายรับทั้งหมด: 0</p>
-    </div>
-    <div>ส่วนที่ใช้แสดงผลรายจ่ายทั้งหมด
-        <ul id="expenseList">
-            <!-- รายจ่ายจะถูกเพิ่มที่นี่ -->
-             <li>ตัวอย่างรายจ่าย 1</li>
-        </ul>
-        <p id="totalExpense">รวมรายจ่ายทั้งหมด: 0</p>
-    </div>
 
+<body>
+
+    <h2>ระบบบันทึกรายรับ - รายจ่าย</h2>
+
+    <form id="budgetForm">
+
+        <label>รายการ:</label>
+        <input type="text" id="item" required>
+
+        <br><br>
+
+        <label>จำนวนเงิน:</label>
+        <input type="number" id="amount" min="0" required>
+
+        <br><br>
+
+        <label>ประเภท:</label>
+        <input type="radio" name="ประเภท" value="รายรับ" required>
+        รายรับ
+
+        <input type="radio" name="ประเภท" value="รายจ่าย">
+        รายจ่าย
+
+        <br><br>
+
+        <input type="submit" value="เพิ่มรายการ">
+        <input type="reset" value="ยกเลิก">
+
+    </form>
+    <h3>สรุปยอดเงิน</h3>
+
+<p id="totalIncome">รายรับรวม: 0 บาท</p>
+
+<p id="totalExpense">รายจ่ายรวม: 0 บาท</p>
+
+<p id="balance">ยอดคงเหลือ: 0 บาท</p>
+<h3>รายการทั้งหมด</h3>
+<ul id="transactionList">
+</ul>
+<script src="busgetfrom.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>บันทึกรายรับรายจ่าย</title>
+</head>
+
+<body>
+
+    <h2>ระบบบันทึกรายรับ - รายจ่าย</h2>
+
+    <form id="budgetForm">
+
+        <label>รายการ:</label>
+        <input type="text" id="item" required>
+
+        <br><br>
+
+        <label>จำนวนเงิน:</label>
+        <input type="number" id="amount" min="0" required>
+
+        <br><br>
+
+        <label>ประเภท:</label>
+        <input type="radio" name="ประเภท" value="รายรับ" required>
+        รายรับ
+
+        <input type="radio" name="ประเภท" value="รายจ่าย">
+        รายจ่าย
+
+        <br><br>
+
+        <input type="submit" value="เพิ่มรายการ">
+        <input type="reset" value="ยกเลิก">
+
+    </form>
+    <h3>สรุปยอดเงิน</h3>
+
+<p id="totalIncome">รายรับรวม: 0 บาท</p>
+
+<p id="totalExpense">รายจ่ายรวม: 0 บาท</p>
+
+<p id="balance">ยอดคงเหลือ: 0 บาท</p>
+<h3>รายการทั้งหมด</h3>
+<ul id="transactionList">
+</ul>
+<script src="busgetfrom.js"></script>
 </body>
 </html>
