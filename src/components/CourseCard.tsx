@@ -1,22 +1,38 @@
+import Link from "next/link";
+import type { Course } from "@/types/course";
+
 type CourseCardProps = {
-  code: string;
-  title: string;
-  credits: number;
-  isOpen: boolean;
+  course: Course;
+  onEdit: () => void;
+  onDelete: () => void;
 };
 
 export default function CourseCard({
-  code,
-  title,
-  credits,
-  isOpen,
+  course,
+  onEdit,
+  onDelete,
 }: CourseCardProps) {
   return (
     <article className="courseCard">
-      <h2>{title}</h2>
-      <p>รหัสวิชา: {code}</p>
-      <p>{credits} หน่วยกิต</p>
-      <p>{isOpen ? "เปิดลงทะเบียน" : "ปิดลงทะเบียน"}</p>
+      <h2>
+        <Link href={`/courses/${course.id}`}>
+          {course.name}
+        </Link>
+      </h2>
+
+      <p>รหัสวิชา: {course.code}</p>
+      <p>{course.credit} หน่วยกิต</p>
+      <p>ผู้สอน: {course.instructor}</p>
+
+      <div>
+        <button type="button" onClick={onEdit}>
+          แก้ไข
+        </button>
+
+        <button type="button" onClick={onDelete}>
+          ลบ
+        </button>
+      </div>
     </article>
   );
 }

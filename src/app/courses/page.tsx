@@ -1,36 +1,12 @@
-import CourseCard from "@/components/CourseCard";
-
-type Course = {
-  id: number;
-  code: string;
-  title: string;
-  credits: number;
-  isOpen: boolean;
-};
-
-const courses: Course[] = [
-  { id: 1, code: "10301231", title: "Web Technology", credits: 3, isOpen: true },
-  { id: 2, code: "10301232", title: "Database Systems", credits: 3, isOpen: false },
-  { id: 3, code: "10301233", title: "Mobile Application", credits: 3, isOpen: true },
-  { id: 4, code: "10301234", title: "Data Structures", credits: 3, isOpen: true },
-];
+import CourseExplorer from "@/components/CourseExplorer";
+import { courses } from "@/data/courses";
 
 export default function CoursesPage() {
   return (
     <main className="page">
       <h1>รายวิชาทั้งหมด</h1>
 
-      <section className="courseGrid">
-        {courses.map((course) => (
-          <CourseCard
-            key={course.id}
-            code={course.code}
-            title={course.title}
-            credits={course.credits}
-            isOpen={course.isOpen}
-          />
-        ))}
-      </section>
+      <CourseExplorer initialCourses={courses} />
     </main>
   );
 }
